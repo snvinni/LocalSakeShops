@@ -69,9 +69,6 @@ cd local-sake-shops
 ```bash
 ./gradlew clean assemble
 ```
-
-Ensure `list.json` is present under `shared/src/commonMain/resources/`.
-
 ---
 
 ## 🤖 Android Setup
