@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.App.Splash" parent="Theme.SplashScreen">
+        <!-- yes, this can reference a theme attribute instead of a literal -->
+        <item name="windowSplashScreenBackground">?attr/colorSurface</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_app</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
