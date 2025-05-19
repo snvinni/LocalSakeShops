@@ -1,9 +1,14 @@
-# Project exclude paths
-/.gradle/
-/build/
-/shared/build/
-/shared/build/classes/kotlin/iosArm64/main/klib/
-/shared/build/classes/kotlin/iosSimulatorArm64/main/klib/
-/shared/build/classes/kotlin/iosSimulatorArm64/test/klib/
-/shared/build/classes/kotlin/iosX64/main/klib/
-/shared/build/classes/kotlin/iosX64/test/klib/
+*.iml
+.gradle
+.idea
+.DS_Store
+build
+captures
+.externalNativeBuild
+.cxx
+local.properties
+xcuserdata
+*.pepk
+.kotlin
+env.properties
+keystore.properties
