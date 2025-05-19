@@ -138,9 +138,35 @@ Ensure `list.json` is present under `shared/src/commonMain/resources/`.
 - **Clean separation**:  
   - `data` – network & parsing  
   - `domain` – entities & use-cases  
-  - `ui` – Compose screens
-  - 
+  - `ui` – Compose screens  
+
 ---
+
+## 🚧 Roadmap & Future Improvements
+
+1. **Offline caching** for network resilience  
+2. **Search & filter** by name, rating, location  
+3. **UI tests** (Espresso on Android, XCTest on iOS)  
+4. **Error states** & retry UI for failed network calls  
+5. **Localization** support  
+
+---
+
+
+---
+
+## 🖼️ Screenshots
+
+### Android
+
+![Android List View](./e3f6e16f-9663-45e9-8e87-00d2a8301db5.png)
+![Android Detail View](./d88c33a3-81d4-48c0-a06d-1b00e1a441f4.png)
+
+### iOS
+
+![iOS List View](./2a39db68-f972-4956-ab23-2db9d7bc992d.png)
+![iOS Detail View](./49898655-4c97-4672-a55e-192dd434f832.png)
+
 
 ## 📬 Contact & License
 
