@@ -8,7 +8,13 @@ import com.jetbrains.vini.domain.SakeShopRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 
-
+/**
+ * Repository that fetches & caches SakeShop data:
+ * • Calls SakeShopApi to get raw responses
+ * • Maps to domain models and stores in a MutableStateFlow
+ * • Returns cached list on repeat calls
+ * • Wraps everything in Resource.Result with error messages as strings
+ */
 class SakeShopRepositoryImpl(
     private val sakeShopApi: SakeShopApi,
 ) : SakeShopRepository {
