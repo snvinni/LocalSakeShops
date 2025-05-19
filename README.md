@@ -38,8 +38,7 @@ Tapping an address opens the native Maps app, and tapping a website link opens t
 │   ├── data/          # Repositories & JSON parsing
 │   └── ui/            # Composables & ViewModels
 ├── androidApp/        # Android host module
-├── iosApp/            # iOS host module
-└── list.json          # Sample data in shared resources
+└── iosApp             # iOS host module
 ```
 
 ---
@@ -159,17 +158,16 @@ Ensure `list.json` is present under `shared/src/commonMain/resources/`.
 
 ### Android
 
-![Android List View](./e3f6e16f-9663-45e9-8e87-00d2a8301db5.png)
-![Android Detail View](./d88c33a3-81d4-48c0-a06d-1b00e1a441f4.png)
+<img width="324" alt="image" src="https://github.com/user-attachments/assets/ad394bd4-cfde-4fb7-954c-fa2a7ab902f9" />
+<img width="331" alt="image" src="https://github.com/user-attachments/assets/ece3b223-2b20-4a9b-b7f9-483983440135" />
 
 ### iOS
 
-![iOS List View](./2a39db68-f972-4956-ab23-2db9d7bc992d.png)
-![iOS Detail View](./49898655-4c97-4672-a55e-192dd434f832.png)
-
+<img width="330" alt="image" src="https://github.com/user-attachments/assets/1e18e2fe-d83a-419d-84b1-4de5124a2947" />
+<img width="332" alt="image" src="https://github.com/user-attachments/assets/0725c4fe-f5f6-4532-a664-14d366ecff92" />
 
 ## 📬 Contact & License
 
 Feel free to open issues or submit PRs!  
-Questions? Reach me at `vi.snascimento07@gmail.com`.  
+Questions? Reach me at `vini.snascimento00@gmail.com`.  
 Licensed under MIT.
