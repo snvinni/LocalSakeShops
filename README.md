@@ -1,28 +1,149 @@
-# Kotlin Multiplatform app template
+# Local Sake Shops
 
-[![official project](http://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+A cross-platform mobile app built with **Kotlin Multiplatform (KMP)** and **Compose Multiplatform (CMP)** that displays a list of local sake shops and detailed information for each.  
+Tapping an address opens the native Maps app, and tapping a website link opens the default browser.
 
-This is a basic Kotlin Multiplatform app template for Android and iOS. It includes shared business logic and data handling, and a shared UI implementation using Compose Multiplatform.
+---
 
-> The template is also available [with native UI written in Jetpack Compose and SwiftUI](https://github.com/kotlin/KMP-App-Template-Native).
->
-> The [`amper` branch](https://github.com/Kotlin/KMP-App-Template/tree/amper) showcases the same project configured with [Amper](https://github.com/JetBrains/amper).
+## 📋 Features
 
-![Screenshots of the app](images/screenshots.png)
+- **List Screen**  
+  - Scrollable list of sake shops  
+  - Displays name, address and star rating  
 
-### Technologies
+- **Detail Screen**  
+  - Shop name, image and description  
+  - Star rating component  
+  - Tappable address (launches Maps)  
+  - “Visit Website” button (opens browser)  
 
-The data displayed by the app is from [The Metropolitan Museum of Art Collection API](https://metmuseum.github.io/).
+- **Shared Business & Data Layer**  
+  - JSON parsing, entities, use-cases and ViewModels live in the `shared` module  
 
-The app uses the following multiplatform dependencies in its implementation:
+- **Compose UI**  
+  - Single codebase for both Android & iOS  
+  - Material 3 components for a consistent look  
 
-- [Compose Multiplatform](https://jb.gg/compose) for UI
-- [Compose Navigation](https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-navigation-routing.html)
-- [Ktor](https://ktor.io/) for networking
-- [kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization) for JSON handling
-- [Coil](https://github.com/coil-kt/coil) for image loading
-- [Koin](https://github.com/InsertKoinIO/koin) for dependency injection
+- **MVVM + Clean Architecture**  
+  - Separation of concerns: `domain`, `data` and `ui` packages  
 
-> These are just some of the possible libraries to use for these tasks with Kotlin Multiplatform, and their usage here isn't a strong recommendation for these specific libraries over the available alternatives. You can find a wide variety of curated multiplatform libraries in the [kmp-awesome](https://github.com/terrakok/kmp-awesome) repository.
-# LocalSakeShopss
+---
+
+## 🗂 Project Structure
+
+```
+/
+├── shared/            # KMP module (commonMain/commonTest)
+│   ├── domain/        # Entities & use-cases
+│   ├── data/          # Repositories & JSON parsing
+│   └── ui/            # Composables & ViewModels
+├── androidApp/        # Android host module
+├── iosApp/            # iOS host module
+└── list.json          # Sample data in shared resources
+```
+
+---
+
+## ⚙️ Prerequisites
+
+- **JDK 11+**  
+- **Kotlin 1.8+**  
+- **Android Studio Electric Eel** (or newer) with KMM & CMP plugins  
+- **Android SDK Platform 33**  
+- **Xcode 14+**  
+- **CocoaPods** (if using Gradle’s CocoaPods integration)  
+- **Git**  
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/local-sake-shops.git
+cd local-sake-shops
+```
+
+### 2. Common setup
+
+```bash
+./gradlew clean assemble
+```
+
+Ensure `list.json` is present under `shared/src/commonMain/resources/`.
+
+---
+
+## 🤖 Android Setup
+
+1. **Open in Android Studio**  
+   - Choose **Open** → select the `androidApp/` folder  
+
+2. **Sync Gradle**  
+   - Click **Sync Now** when prompted  
+
+3. **Run on device/emulator**  
+   - Target API 33+ and hit **Run**  
+
+4. **APK location**  
+   - `androidApp/build/outputs/apk/debug/androidApp-debug.apk`
+
+---
+
+## 🍎 iOS Setup
+
+1. **Install CocoaPods** (if required):
+
+   ```bash
+   cd iosApp
+   ./gradlew podInstall
+   ```
+
+2. **Open Xcode workspace**  
+   - Open `iosApp/iosApp.xcworkspace`  
+
+3. **Select scheme & simulator**  
+   - Choose the `iosApp` scheme and iOS 15+ simulator  
+
+4. **Build & Run**  
+   - Press ⌘R or click **Run**  
+
+---
+
+## 🧪 Testing
+
+- **Shared unit tests**:
+
+  ```bash
+  ./gradlew shared:test
+  ```
+
+- **Android unit tests**:
+
+  ```bash
+  ./gradlew androidApp:testDebugUnitTest
+  ```
+
+- **iOS unit tests**  
+  - Run `iosAppTests` from Xcode’s Test navigator  
+
+---
+
+## 🏗 Architecture & Design
+
+- **Single Source of Truth** in `shared` for all business logic  
+- **Compose Multiplatform** UI for feature parity and faster iteration  
+- **MVVM** pattern with `ViewModel`s in `shared`  
+- **Clean separation**:  
+  - `data` – network & parsing  
+  - `domain` – entities & use-cases  
+  - `ui` – Compose screens
+  - 
+---
+
+## 📬 Contact & License
+
+Feel free to open issues or submit PRs!  
+Questions? Reach me at `vi.snascimento07@gmail.com`.  
+Licensed under MIT.
