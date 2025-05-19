@@ -12,3 +12,5 @@ xcuserdata
 .kotlin
 env.properties
 keystore.properties
+.idea/
+**/.kotlin/
